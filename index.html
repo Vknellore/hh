@@ -1,138 +1,216 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build Wealth in UK Property — Without Lifting a Finger</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://picsum.photos/id/1015/1920/1080');
-      background-size: cover;
-      background-position: center;
-    }
-    .card-hover:hover { transform: translateY(-8px); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium hands-free UK property investments">
+    <title>UK House | Premium UK Property Investments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+       
+        :root {
+            --charcoal: #1a1a1a;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(26,26,26,0.88), rgba(26,26,26,0.88)),
+                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat fixed;
+        }
+        
+        .gold { color: #d4af37; }
+        .gold-bg { background-color: #d4af37; }
+        
+        .section-title { 
+            font-family: 'Playfair Display', sans-serif; 
+            letter-spacing: -0.04em;
+        }
+        
+        .card { 
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .card:hover { 
+            transform: translateY(-12px); 
+            box-shadow: 0 30px 60px -15px rgba(212, 175, 55, 0.25); 
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #d4af37;
+            transition: width 0.4s ease;
+        }
+        .nav-link:hover:after { width: 100%; }
+    </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="bg-[#f8f7f4] text-[#1a1a1a] font-sans">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-md z-50 border-b border-zinc-800">
-    <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
-      <div class="text-2xl md:text-3xl font-bold tracking-tighter text-amber-400">YOUR BRAND</div>
+    <!-- HEADER -->
+    <header class="bg-white border-b border-gray-200 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-8 py-7 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-11 h-11 bg-[#1a1a1a] text-white rounded-full flex items-center justify-center font-bold text-3xl">U</div>
+                <div class="text-3xl font-semibold tracking-tight">UK House</div>
+            </div>
+            
+            <nav class="hidden md:flex gap-10 text-lg font-medium">
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#how" class="nav-link">How It Works</a>
+                <a href="#deals" class="nav-link">Deals</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <a href="#contact" class="gold-bg text-black px-9 py-4 rounded-2xl font-semibold hover:bg-amber-300 transition-all">
+                Book a Strategy Call
+            </a>
+        </div>
+    </header>
 
-      <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest">
-        <a href="#offers" class="hover:text-amber-400">Offers</a>
-        <a href="#how" class="hover:text-amber-400">How It Works</a>
-        <a href="#deals" class="hover:text-amber-400">Deals</a>
-        <a href="#about" class="hover:text-amber-400">About</a>
-        <a href="#faq" class="hover:text-amber-400">FAQ</a>
-      </div>
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center pt-20 text-white">
+        <div class="max-w-5xl mx-auto text-center px-6">
+            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-8 section-title">
+                Build Lasting Wealth in UK Property
+            </h1>
+            <p class="text-3xl md:text-4xl text-white/90 mb-12">
+                Hands-free. Expertly managed.<br>Exclusively for discerning investors.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#contact" class="gold-bg text-black px-14 py-7 rounded-3xl text-2xl font-semibold hover:bg-amber-300 transition-all">
+                    Book Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
 
-      <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
-              class="hidden md:block bg-amber-500 hover:bg-amber-400 text-black px-7 py-3 rounded-full font-semibold transition">
-        Book a Call
-      </button>
+    <!-- WHY US -->
+    <section id="why" class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-bold text-center mb-4 section-title">Why Choose UK House</h2>
+            <p class="text-center text-2xl text-gray-600 mb-16">Excellence in Every Detail</p>
+           
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-10 rounded-3xl border border-gray-100">
+                    <h4 class="text-2xl font-semibold mb-4">Strong Returns</h4>
+                    <p class="text-gray-600">Carefully vetted deals with excellent yields and capital growth.</p>
+                </div>
+                <div class="card bg-white p-10 rounded-3xl border border-gray-100">
+                    <h4 class="text-2xl font-semibold mb-4">Fully Managed</h4>
+                    <p class="text-gray-600">End-to-end service — we handle everything.</p>
+                </div>
+                <div class="card bg-white p-10 rounded-3xl border border-gray-100">
+                    <h4 class="text-2xl font-semibold mb-4">Truly Hands-Free</h4>
+                    <p class="text-gray-600">No tenants, no repairs, no stress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <button id="hamburger" class="md:hidden text-3xl">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
+    <!-- OFFERS -->
+    <section id="offers" class="py-28 bg-[#1a1a1a] text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-5xl font-bold text-center mb-16 section-title text-white">Our Investment Offers</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-[#2a2a2a] p-10 rounded-3xl card">
+                    <h3 class="text-3xl font-semibold mb-6 gold">Portfolio Building</h3>
+                    <p class="text-gray-300">Complete remote portfolio construction and management.</p>
+                </div>
+                <div class="bg-[#2a2a2a] p-10 rounded-3xl card">
+                    <h3 class="text-3xl font-semibold mb-6 gold">Vetted Turnkey Deals</h3>
+                    <p class="text-gray-300">Ready-to-invest properties with immediate rental income.</p>
+                </div>
+                <div class="bg-[#2a2a2a] p-10 rounded-3xl card">
+                    <h3 class="text-3xl font-semibold mb-6 gold">Development Co-Investment</h3>
+                    <p class="text-gray-300">High-return development projects with experienced partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-700">
-      <div class="flex flex-col px-5 py-6 space-y-6 text-lg">
-        <a href="#offers">Offers</a>
-        <a href="#how">How It Works</a>
-        <a href="#deals">Deals</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="bg-amber-500 text-black py-4 text-center rounded-2xl font-semibold">Book a Call</a>
-      </div>
-    </div>
-  </nav>
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-8 text-center">
+            <h2 class="text-5xl font-bold mb-16 section-title">How It Works</h2>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">1</div><p class="font-semibold">Book a Call</p></div>
+                <div><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">2</div><p class="font-semibold">Share Your Goals</p></div>
+                <div><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">3</div><p class="font-semibold">We Source Deals</p></div>
+                <div><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">4</div><p class="font-semibold">You Invest</p></div>
+                <div><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">5</div><p class="font-semibold">We Manage</p></div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero Section - Smithstone Style -->
-  <section class="hero-bg min-h-screen flex items-center justify-center text-center px-5">
-    <div class="max-w-5xl mx-auto pt-16">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-        Build Wealth in UK Property<br><span class="text-amber-400">— Without Lifting a Finger</span>
-      </h1>
-      <p class="text-lg md:text-2xl text-zinc-300 mb-12 max-w-3xl mx-auto">
-        Remote portfolio building, fully managed deals, and co-investment opportunities.
-      </p>
+    <!-- CONTACT FORM -->
+    <section id="contact" class="py-28 bg-[#1a1a1a] text-white">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-4 section-title">Start Your Property Journey</h2>
+            <p class="text-center text-xl text-gray-400 mb-12">Book a free strategy call or send us a message</p>
+            
+            <form action="https://formspree.io/f/mqenanop" method="POST" class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2">Full Name</label>
+                        <input type="text" name="name" required
+                               class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-2">Email Address</label>
+                        <input type="email" name="email" required
+                               class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:border-amber-400">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm mb-2">Phone Number</label>
+                    <input type="tel" name="phone"
+                           class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:border-amber-400">
+                </div>
+                
+                <div>
+                    <label class="block text-sm mb-2">Message / Investment Interest</label>
+                    <textarea name="message" rows="5" required
+                              class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl focus:outline-none focus:border-amber-400"></textarea>
+                </div>
+                
+                <button type="submit"
+                        class="w-full gold-bg text-black py-6 rounded-3xl text-xl font-semibold hover:bg-amber-300 transition-all">
+                    Send Message & Book Call
+                </button>
+            </form>
+            
+            <p class="text-center text-sm text-gray-500 mt-8">
+                We respect your time. You will hear back within 24 hours.
+            </p>
+        </div>
+    </section>
 
-      <!-- I WANT TO INVEST + I NEED TO SELL Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <!-- I WANT TO INVEST Button -->
-        <a href="#contact" 
-           class="group bg-white text-black px-10 py-5 rounded-full text-lg font-semibold hover:bg-amber-400 transition flex items-center gap-3">
-          <span>I WANT TO INVEST</span>
-          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-        </a>
+    <!-- FOOTER -->
+    <footer class="bg-white py-20 border-t border-gray-200 text-center text-gray-500">
+        <div class="max-w-7xl mx-auto px-8">
+            <p class="text-4xl font-semibold text-black mb-3">UK House</p>
+            <p class="mb-8">Premium Hands-Free UK Property Investments</p>
+            <p>© 2026 UK House Property Investments • All Rights Reserved</p>
+        </div>
+    </footer>
 
-        <!-- I NEED TO SELL Button -->
-        <a href="#sell" 
-           class="group border-2 border-white text-white px-10 py-5 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition flex items-center gap-3">
-          <span>I NEED TO SELL</span>
-          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- === INVESTOR SECTION (Same as Smithstone) === -->
-  <section id="contact" class="py-20 md:py-24 bg-zinc-900">
-    <div class="max-w-2xl mx-auto px-5 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">I Want To Invest</h2>
-      <p class="text-zinc-400 mb-10">Complete the form below and we'll contact you to organise a free strategy call.</p>
-      
-      <form action="https://formspree.io/f/mqenanop" method="POST" class="space-y-6">
-        <input type="text" name="name" placeholder="Full Name" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <input type="tel" name="phone" placeholder="Phone Number" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <textarea name="message" placeholder="Tell us about your investment goals, budget, and timeline..." rows="5" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4"></textarea>
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-semibold py-6 rounded-2xl text-xl transition">
-          Submit Enquiry
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- === SELL SECTION (for "I NEED TO SELL") === -->
-  <section id="sell" class="py-20 md:py-24 bg-black">
-    <div class="max-w-2xl mx-auto px-5 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">I Need To Sell</h2>
-      <p class="text-zinc-400 mb-10">Get a free, no-obligation valuation for your property.</p>
-      
-      <form action="https://formspree.io/f/mqenanop" method="POST" class="space-y-6">
-        <input type="text" name="name" placeholder="Full Name" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <input type="tel" name="phone" placeholder="Phone Number" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <input type="text" name="property_address" placeholder="Property Address" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-semibold py-6 rounded-2xl text-xl transition">
-          Request Free Valuation
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="bg-black py-10 text-center text-zinc-500">
-    <p>&copy; 2026 YOUR BRAND. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    // Hamburger Menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const icon = hamburger.querySelector('i');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
-    });
-  </script>
+    <!-- Formspree Success Message -->
+    <script>
+        document.addEventListener("submit", function(e) {
+            if (e.target.tagName === "FORM") {
+                setTimeout(() => {
+                    alert("Thank you! Your message has been received. We'll contact you shortly.");
+                }, 800);
+            }
+        });
+    </script>
 </body>
 </html>
