@@ -45,11 +45,19 @@
 
     /* Navigation */
     header {
+      background: transparent;
+      box-shadow: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header.scrolled {
       background: white;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
     nav {
@@ -65,7 +73,7 @@
     .logo {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #0f766e;
+      color: white;
       cursor: pointer;
       text-decoration: none;
     }
@@ -79,7 +87,7 @@
 
     nav a {
       text-decoration: none;
-      color: #4b5563;
+      color: white;
       font-weight: 500;
       font-size: 0.95rem;
       transition: color 0.3s;
@@ -87,6 +95,18 @@
     }
 
     nav a:hover {
+      color: #d1fae5;
+    }
+
+    header.scrolled .logo {
+      color: #0f766e;
+    }
+
+    header.scrolled nav a {
+      color: #4b5563;
+    }
+
+    header.scrolled nav a:hover {
       color: #0f766e;
     }
 
@@ -110,7 +130,7 @@
     .hero {
       background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
       color: white;
-      padding: 5rem 2rem 4rem;
+      padding: 7rem 2rem 4rem;
       text-align: center;
     }
 
@@ -734,10 +754,20 @@
  </head>
  <body>
   <div class="app-wrapper">
-   <header><nav><div class="logo" onclick="showPage('home')">🏠 UK Property Invest</div><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('offers')">Our Offers</a></li><li><a onclick="showPage('portfolio')">Portfolio Building</a></li><li><a onclick="showPage('income')">Passive Income</a></li><li><a onclick="showPage('development')">Development</a></li><li><a onclick="showPage('faq')">FAQ</a></li><li><a onclick="showPage('about')">About</a></li><li><button class="nav-btn" onclick="openBookingModal()">Book a Call</button></li></ul></nav></header>
-   <div id="home" class="page active"><section class="hero"><h1>Build Wealth in UK Property — Without Lifting a Finger</h1><p>Remote portfolio building, fully managed deals, and co-investment opportunities</p><button class="btn btn-primary" onclick="showPage('offers')">Explore Our Offers</button></section></div>
+   <header><nav><div class="logo" onclick="showPage('home')">🏠 UK Property Invest</div><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('offers')">Our Offers</a></li><li><a onclick="showPage('portfolio')">Portfolio Building</a></li><li><a onclick="showPage('income')">Passive Income</a></li><li><a onclick="showPage('development')">Development</a></li><li><a onclick="showPage('faq')">FAQ</a></li><li><a onclick="showPage('about')">About</a></li></ul></nav></header>
+   <div id="home" class="page active"><section class="hero"><h1>Build Wealth in UK Property — Without Lifting a Finger</h1><p>Remote portfolio building, fully managed deals, and co-investment opportunities</p><div style="display:flex;gap:1rem;justify-content:center;align-items:stretch;flex-wrap:wrap;max-width:1000px;margin:2rem auto 0;"><img class="hero-image" style="margin:0;max-width:640px;height:360px;" src="https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1400&q=80" alt="Aerial view of residential neighborhood"><img class="hero-image" style="margin:0;max-width:320px;height:360px;" src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=700&q=80" alt="Row houses on a city street"></div><button class="btn btn-primary" style="margin-top:2rem;" onclick="showPage('offers')">Explore Our Offers</button></section></div>
   </div>
   <script>
+    function updateHeaderState() {
+      const header = document.querySelector('header');
+      if (!header) return;
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
       const page = document.getElementById(pageId);
@@ -746,6 +776,7 @@
         window.scrollTo(0, 0);
       }
       lucide.createIcons();
+      updateHeaderState();
     }
     function openBookingModal() { const m = document.getElementById('bookingModal'); if (m) m.classList.add('active'); }
     function closeBookingModal() {
@@ -767,6 +798,8 @@
       const modal = document.getElementById('bookingModal');
       if (event.target === modal) closeBookingModal();
     });
+    window.addEventListener('scroll', updateHeaderState);
+    updateHeaderState();
     lucide.createIcons();
   </script>
  </body>
