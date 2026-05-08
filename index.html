@@ -1,221 +1,806 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK House | Build Wealth in UK Property — Without Lifting a Finger</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-       
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
-                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat fixed;
-        }
-        .gold { color: #d4af37; }
-        .gold-bg { background-color: #d4af37; }
-        .section-title { font-family: 'Playfair Display', sans-serif; }
-        .card { transition: all 0.4s; }
-        .card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(212 175 55 / 0.2); }
-        .coal-header { background-color: #0a0a0a; }
-    </style>
-</head>
-<body class="bg-zinc-950 text-white font-sans">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Property Investment - Build Wealth in Property</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- HEADER -->
-    <header class="coal-header border-b border-zinc-800 fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center text-black font-bold text-2xl">U</div>
-                <div class="text-3xl font-bold tracking-tighter text-white">UK House</div>
-            </div>
-            <nav class="hidden md:flex gap-10 text-lg">
-                <a href="#offers" class="hover:text-amber-400 text-white">Offers</a>
-                <a href="#how" class="hover:text-amber-400 text-white">How It Works</a>
-                <a href="#deals" class="hover:text-amber-400 text-white">Deals</a>
-                <a href="#why" class="hover:text-amber-400 text-white">Why Us</a>
-                <a href="#contact" class="hover:text-amber-400 text-white">Contact</a>
-            </nav>
-            <a href="#contact" class="gold-bg text-black px-8 py-4 rounded-2xl font-semibold hover:bg-amber-300">Book a Call</a>
-        </div>
-    </header>
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
 
-    <!-- HERO - House Exterior -->
-    <section class="hero-bg h-screen flex items-center pt-20">
-        <div class="max-w-5xl mx-auto text-center px-6">
-            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6 section-title text-white">
-                Build Wealth in UK Property<br>— Without Lifting a Finger
-            </h1>
-            <p class="text-3xl text-zinc-200 mb-12">
-                Remote portfolio building, fully managed deals,<br>and co-investment opportunities
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#offers" class="gold-bg text-black px-12 py-6 rounded-2xl text-2xl font-semibold hover:bg-amber-300">Explore Offers</a>
-                <a href="#contact" class="border-2 border-amber-400 px-12 py-6 rounded-2xl text-2xl font-semibold hover:bg-white hover:text-black">Book Strategy Call</a>
-            </div>
-        </div>
-    </section>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background: white;
+    }
 
-    <!-- WHY CHOOSE US -->
-    <section id="why" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-5xl font-bold text-center mb-4 section-title text-white">Why Choose UK House</h2>
-            <p class="text-center text-2xl text-amber-400 mb-16">Built on Trust & Excellence</p>
-           
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Strong Returns</h4><p class="text-zinc-400">Vetted deals with excellent yields and capital growth.</p></div>
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Fully Managed</h4><p class="text-zinc-400">End-to-end service: sourcing to ongoing management.</p></div>
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Hands-Free</h4><p class="text-zinc-400">No sourcing, no tenants, no headaches.</p></div>
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Conservative Approach</h4><p class="text-zinc-400">Stress-tested numbers and strict due diligence.</p></div>
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Expert Power Team</h4><p class="text-zinc-400">Work with top UK property professionals.</p></div>
-                <div class="bg-zinc-950 p-8 rounded-3xl card"><h4 class="text-2xl font-semibold mb-3 text-white">Full Transparency</h4><p class="text-zinc-400">Clear communication and honest projections.</p></div>
-            </div>
-        </div>
-    </section>
+    .app-wrapper {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
 
-    <!-- CORE OFFERS -->
-    <section id="offers" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-5xl font-bold text-center mb-16 section-title text-white">Our Core Offers</h2>
-           
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-zinc-900 p-10 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-6 gold">Build a UK Property Portfolio Remotely</h3>
-                    <p class="text-zinc-400 text-lg">Done-for-you portfolio building from sourcing to management.</p>
-                    <ul class="mt-8 space-y-3 text-zinc-300">
-                        <li>✔ Full end-to-end service</li>
-                        <li>✔ Sourcing, Due Diligence, Refurbishment & Letting</li>
-                        <li>✔ Ideal for busy professionals</li>
-                    </ul>
-                </div>
-               
-                <div class="bg-zinc-900 p-10 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-6 gold">Hands-Free Income Through Vetted Deals</h3>
-                    <p class="text-zinc-400 text-lg">Pre-packaged, income-generating opportunities.</p>
-                    <ul class="mt-8 space-y-3 text-zinc-300">
-                        <li>✔ Buy-to-Let • BRR • Turnkey</li>
-                        <li>✔ Fully analysed & packaged</li>
-                        <li>✔ Passive monthly income</li>
-                    </ul>
-                </div>
-               
-                <div class="bg-zinc-900 p-10 rounded-3xl card">
-                    <img src="https://picsum.photos/id/1015/600/400" alt="Development Project" class="w-full h-52 object-cover rounded-2xl mb-6">
-                    <h3 class="text-3xl font-semibold mb-6 gold">Co-Invest in Development Projects</h3>
-                    <p class="text-zinc-400 text-lg">Access high-return development deals with experienced partners.</p>
-                    <ul class="mt-6 space-y-2 text-zinc-300 text-sm">
-                        <li>✔ Minimum investment from £50,000</li>
-                        <li>✔ Projected 18-35% ROI</li>
-                        <li>✔ Full project management included</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    .page {
+      display: none;
+    }
 
-    <!-- HOW IT WORKS -->
-    <section id="how" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-8">
-            <h2 class="text-5xl font-bold text-center mb-16 section-title text-white">How It Works</h2>
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="text-center"><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">1</div><p class="font-semibold text-white">Book a Call</p></div>
-                <div class="text-center"><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">2</div><p class="font-semibold text-white">Define Your Goals</p></div>
-                <div class="text-center"><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">3</div><p class="font-semibold text-white">We Source & Structure</p></div>
-                <div class="text-center"><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">4</div><p class="font-semibold text-white">You Invest</p></div>
-                <div class="text-center"><div class="w-20 h-20 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-4xl font-bold mb-6">5</div><p class="font-semibold text-white">We Manage</p></div>
-            </div>
-        </div>
-    </section>
+    .page.active {
+      display: flex;
+      flex-direction: column;
+    }
 
-    <!-- HANDS-FREE DEALS -->
-    <section id="deals" class="py-24 bg-black">
-        <div class="max-w-6xl mx-auto px-8">
-            <h2 class="text-5xl font-bold text-center mb-4 section-title text-white">Hands-Free Income Through Vetted Deals</h2>
-            <p class="text-center text-2xl text-zinc-400 mb-16">Invest in property deals that are already done for you</p>
-            <div class="bg-zinc-900 border border-amber-900 rounded-3xl p-12 max-w-4xl mx-auto">
-                <h3 class="text-3xl mb-8 text-white">Example Deal – Manchester</h3>
-                <div class="grid grid-cols-2 gap-y-8 text-lg">
-                    <div><span class="text-zinc-400">Purchase Price:</span> <strong class="text-white">£145,000</strong></div>
-                    <div><span class="text-zinc-400">Total Investment:</span> <strong class="text-white">£160,000</strong></div>
-                    <div><span class="text-zinc-400">Monthly Rental:</span> <strong class="text-white">£1,150</strong></div>
-                    <div><span class="text-zinc-400">Net Cash Flow:</span> <strong class="gold">~£450 / month</strong></div>
-                    <div><span class="text-zinc-400">Yield:</span> <strong class="gold">8.6%</strong></div>
-                </div>
-                <p class="mt-10 text-amber-400 text-lg">Fully refurbished • Professionally tenanted • Hands-free management from day one</p>
-            </div>
-        </div>
-    </section>
+    /* Navigation */
+    header {
+      background: transparent;
+      box-shadow: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
 
-    <!-- FINAL CTA -->
-    <section id="contact" class="py-32 bg-zinc-900 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-6xl font-bold mb-8 section-title text-white">Start Building Passive Property Income Today</h2>
-            <p class="text-2xl text-zinc-300 mb-12">No sourcing. No stress. No management.<br>Just carefully selected deals and consistent returns.</p>
-            <a href="#" class="gold-bg text-black px-16 py-8 rounded-3xl text-3xl font-semibold inline-block hover:bg-amber-300">Book Your Free Strategy Call Now</a>
-        </div>
-    </section>
+    header.scrolled {
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
 
-    <!-- PROFESSIONAL FOOTER -->
-    <footer class="bg-[#0a1428] text-gray-300 py-16">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid md:grid-cols-12 gap-10">
-                <!-- Logo & Description -->
-                <div class="md:col-span-5">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-black font-bold text-3xl">U</div>
-                        <div>
-                            <span class="text-3xl font-bold tracking-tighter text-white">UK House</span>
-                            <p class="text-xs text-amber-400 -mt-1">PROPERTY INVESTMENTS</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed max-w-md">
-                        Your trusted partner in residential property investment and sourcing. Building lasting relationships through excellence, integrity, and results.
-                    </p>
-                </div>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
-                <!-- Quick Links -->
-                <div class="md:col-span-3">
-                    <h4 class="text-white font-semibold mb-6 text-lg">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#offers" class="hover:text-amber-400">Offers</a></li>
-                        <li><a href="#deals" class="hover:text-amber-400">Deals</a></li>
-                        <li><a href="#how" class="hover:text-amber-400">How It Works</a></li>
-                        <li><a href="#why" class="hover:text-amber-400">Why Us</a></li>
-                    </ul>
-                </div>
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-                <!-- Get in Touch -->
-                <div class="md:col-span-4">
-                    <h4 class="text-white font-semibold mb-6 text-lg">Get in Touch</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-phone text-amber-400"></i>
-                            <span>020 7946 0958</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-amber-400"></i>
-                            <span>enquiries@ukhouseinvest.com</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-map-marker-alt text-amber-400"></i>
-                            <span>London, United Kingdom</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-            <hr class="border-gray-700 my-12">
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
-                <p>© 2026 UK House Property Investments Limited. All rights reserved.</p>
-                <p class="mt-4 md:mt-0">
-                    <a href="#" class="hover:text-amber-400">Privacy Policy</a> • 
-                    <a href="#" class="hover:text-amber-400">Terms & Conditions</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+    nav a:hover {
+      color: #d1fae5;
+    }
 
-</body>
+    header.scrolled .logo {
+      color: #0f766e;
+    }
+
+    header.scrolled nav a {
+      color: #4b5563;
+    }
+
+    header.scrolled nav a:hover {
+      color: #0f766e;
+    }
+
+    .nav-btn {
+      background: #0f766e;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .nav-btn:hover {
+      background: #0d5f5a;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      padding: 7rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.95;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin: 2rem auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,0.2);
+      font-size: 3rem;
+      object-fit: cover;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: #e5e7eb;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0f766e;
+    }
+
+    .btn-primary:hover {
+      background: #f0fdf4;
+    }
+
+    .btn-secondary {
+      background: #0f766e;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #0d5f5a;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #0f766e;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #0f766e;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #4b5563;
+      line-height: 1.8;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* Offers Cards - Distinct Design */
+    .offer-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 10px;
+      border-left: 5px solid #0f766e;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    .offer-card:nth-child(2) {
+      border-left-color: #14b8a6;
+    }
+
+    .offer-card:nth-child(3) {
+      border-left-color: #06b6d4;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .offer-card h3 {
+      font-size: 1.4rem;
+      color: #0f766e;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .offer-card p {
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    /* How It Works */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: #0f766e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+
+    .step h4 {
+      color: #0f766e;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .step p {
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    /* Problem/Solution Section */
+    .problem-section {
+      background: #f0fdf4;
+      border-left: 5px solid #ef4444;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    .problem-section h4 {
+      color: #991b1b;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .problem-list {
+      list-style: none;
+    }
+
+    .problem-list li {
+      color: #4b5563;
+      padding: 0.5rem 0;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .problem-list li:before {
+      content: "✗";
+      position: absolute;
+      left: 0;
+      color: #ef4444;
+      font-weight: bold;
+    }
+
+    .solution-section {
+      background: #f0fdf4;
+      border-left: 5px solid #22c55e;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    .solution-section h4 {
+      color: #166534;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .solution-list {
+      list-style: none;
+    }
+
+    .solution-list li {
+      color: #4b5563;
+      padding: 0.5rem 0;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .solution-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* Deal Breakdown */
+    .deal-box {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .deal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .deal-item {
+      text-align: center;
+    }
+
+    .deal-label {
+      color: #6b7280;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .deal-value {
+      color: #0f766e;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      border-left: 4px solid #0f766e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .testimonial p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      color: #0f766e;
+      font-weight: 600;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .cta-section p {
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.95;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .about-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 2px solid #e5e7eb;
+    }
+
+    .about-box h3 {
+      color: #0f766e;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .about-box p {
+      color: #4b5563;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background: #1f2937;
+      color: white;
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #14b8a6;
+    }
+
+    /* Icon styling */
+    .icon {
+      width: 40px;
+      height: 40px;
+      color: #0f766e;
+      margin-bottom: 1rem;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      float: right;
+      font-size: 1.5rem;
+      color: #9ca3af;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s;
+    }
+
+    .modal-close:hover {
+      color: #0f766e;
+    }
+
+    .modal h2 {
+      color: #0f766e;
+      margin-bottom: 1.5rem;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #0f766e;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: #0f766e;
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .modal-buttons button {
+      flex: 1;
+    }
+
+    .toast {
+      display: none;
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #22c55e;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      z-index: 2000;
+      animation: slideIn 0.3s ease-out;
+    }
+
+    .toast.active {
+      display: block;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 0.75rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .cta-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .deal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        padding: 0.75rem 1rem;
+      }
+
+      .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="app-wrapper">
+   <header><nav><div class="logo" onclick="showPage('home')">🏠 UK Property Invest</div><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('offers')">Our Offers</a></li><li><a onclick="showPage('portfolio')">Portfolio Building</a></li><li><a onclick="showPage('income')">Passive Income</a></li><li><a onclick="showPage('development')">Development</a></li><li><a onclick="showPage('faq')">FAQ</a></li><li><a onclick="showPage('about')">About</a></li></ul></nav></header>
+   <div id="home" class="page active"><section class="hero"><h1>Build Wealth in UK Property — Without Lifting a Finger</h1><p>Remote portfolio building, fully managed deals, and co-investment opportunities</p><div style="display:flex;gap:1rem;justify-content:center;align-items:stretch;flex-wrap:wrap;max-width:1000px;margin:2rem auto 0;"><img class="hero-image" style="margin:0;max-width:640px;height:360px;" src="https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1400&q=80" alt="Aerial view of residential neighborhood"><img class="hero-image" style="margin:0;max-width:320px;height:360px;" src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=700&q=80" alt="Row houses on a city street"></div><button class="btn btn-primary" style="margin-top:2rem;" onclick="showPage('offers')">Explore Our Offers</button></section></div>
+  </div>
+  <script>
+    function updateHeaderState() {
+      const header = document.querySelector('header');
+      if (!header) return;
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      const page = document.getElementById(pageId);
+      if (page) {
+        page.classList.add('active');
+        window.scrollTo(0, 0);
+      }
+      lucide.createIcons();
+      updateHeaderState();
+    }
+    function openBookingModal() { const m = document.getElementById('bookingModal'); if (m) m.classList.add('active'); }
+    function closeBookingModal() {
+      const m = document.getElementById('bookingModal');
+      if (m) m.classList.remove('active');
+      const f = document.getElementById('bookingForm');
+      if (f) f.reset();
+    }
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      closeBookingModal();
+      const toast = document.getElementById('successToast');
+      if (toast) {
+        toast.classList.add('active');
+        setTimeout(() => toast.classList.remove('active'), 4000);
+      }
+    }
+    document.addEventListener('click', function(event) {
+      const modal = document.getElementById('bookingModal');
+      if (event.target === modal) closeBookingModal();
+    });
+    window.addEventListener('scroll', updateHeaderState);
+    updateHeaderState();
+    lucide.createIcons();
+  </script>
+ </body>
 </html>
