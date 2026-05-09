@@ -6,33 +6,35 @@
     <title>UK House | Hands-Free UK Property Investments</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Playfair Display Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
     <style>
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.85)),
+            background: linear-gradient(rgba(120, 120, 120, 0.65), rgba(80, 80, 80, 0.75)),
                         url('https://dry-gray-5bptigvcvc.edgeone.app/Gemini_Generated_Image_3sw5uz3sw5uz3sw5.png') center/cover no-repeat fixed;
         }
+       
+        .accent { 
+            background-color: #6b7280; 
+            color: white; 
+        }
+        .accent-hover:hover { 
+            background-color: #4b5563; 
+        }
+        .beige { background-color: #f5f5dc; }
         
-        .gold { color: #d4af37; }
-        .gold-bg { background-color: #d4af37; }
-        .navy { background-color: #0f172a; }
-        .deep-navy { background-color: #0a1428; }
-
         .section-title {
             font-family: 'Playfair Display', sans-serif;
             letter-spacing: -0.04em;
         }
-        .card { 
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        .card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .card:hover { 
-            transform: translateY(-8px); 
+        .card:hover {
+            transform: translateY(-8px);
         }
-        .nav-link { 
-            position: relative; 
+        .nav-link {
+            position: relative;
         }
         .nav-link:after {
             content: '';
@@ -41,57 +43,77 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #d4af37;
+            background-color: #e5e7eb;
             transition: width 0.3s ease;
         }
-        .nav-link:hover:after { width: 100%; }
-
+        
         .compact-input {
             padding: 14px 20px !important;
             font-size: 15px;
         }
+        .icon-circle {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6b7280;
+            color: white;
+            border-radius: 9999px;
+            font-size: 1.4rem;
+        }
 
+        /* Navbar Styling */
         .navbar {
             transition: all 0.4s ease;
         }
         .navbar.scrolled {
-            background-color: #0f172a !important;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 240, 0.98) !important;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .navbar.scrolled .nav-text {
+            color: #1f2937 !important;
+        }
+        .navbar.scrolled .nav-link:after {
+            background-color: #4b5563;
         }
     </style>
 </head>
-<body class="bg-[#f8f7f4] text-[#1a1a1a] font-sans">
+<body class="bg-[#fffff0] text-[#1f2937] font-sans">
 
     <!-- NAVBAR -->
     <header id="navbar" class="navbar bg-transparent text-white fixed w-full z-50 py-4">
         <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-white text-[#0f172a] rounded-full flex items-center justify-center font-bold text-2xl">U</div>
-                <div class="text-2xl font-semibold tracking-tight">UK House</div>
+                <div class="w-9 h-9 bg-white text-[#1f2937] rounded-full flex items-center justify-center font-bold text-2xl">U</div>
+                <div class="text-2xl font-semibold tracking-tight nav-text">UK House</div>
             </div>
-          
+         
             <nav class="hidden md:flex gap-8 text-base font-medium">
-                <a href="#offers" class="nav-link">Offers</a>
-                <a href="#how" class="nav-link">How It Works</a>
-                <a href="#deals" class="nav-link">Deals</a>
+                <a href="#offers" class="nav-link nav-text">Offers</a>
+                <a href="#how" class="nav-link nav-text">How It Works</a>
+                <a href="#deals" class="nav-link nav-text">Deals</a>
             </nav>
             <div class="flex items-center gap-4">
-                <a href="#strategy-call" class="gold-bg text-black px-6 py-3 rounded-2xl font-semibold hover:bg-amber-300 text-sm hidden sm:block">
-                    Book Strategy Call
+                <a href="#strategy-call" class="accent px-6 py-3 rounded-2xl font-semibold accent-hover text-sm hidden sm:block">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Strategy Call
                 </a>
                 <button id="mobile-menu-btn" class="md:hidden text-3xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
-
+        
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden deep-navy py-6">
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-6 border-t shadow-lg text-[#1f2937]">
             <div class="flex flex-col px-6 space-y-6 text-lg">
                 <a href="#offers">Offers</a>
                 <a href="#how">How It Works</a>
                 <a href="#deals">Deals</a>
-                <a href="#strategy-call" class="gold-bg text-black py-4 rounded-2xl text-center font-semibold">Book Strategy Call</a>
+                <a href="#strategy-call" class="accent text-center py-4 rounded-2xl font-semibold">
+                    <i class="fas fa-calendar-check mr-2"></i>Book Strategy Call
+                </a>
             </div>
         </div>
     </header>
@@ -102,51 +124,74 @@
             <h1 class="text-4xl md:text-6xl font-bold leading-none mb-6 section-title">
                 Build Wealth in UK Property<br>— Without Lifting a Finger
             </h1>
-            <p class="text-2xl md:text-4xl text-white/90 mb-10">
+            <p class="text-2xl md:text-4xl text-white/95 mb-10">
                 Remote portfolio building, fully managed deals,<br>and co-investment opportunities
             </p>
             <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#investment-form" class="gold-bg text-black px-10 py-5 rounded-3xl text-lg font-semibold hover:bg-amber-300">
-                    I Want to Invest
+                <a href="#investment-form" class="accent px-10 py-5 rounded-3xl text-lg font-semibold accent-hover">
+                    <i class="fas fa-chart-line mr-3"></i>I Want to Invest
                 </a>
-                <a href="#sell-form" class="border-2 border-white text-white px-10 py-5 rounded-3xl text-lg font-semibold hover:bg-white hover:text-black">
-                    I Want to Sell
+                <a href="#sell-form" class="border-2 border-white text-white px-10 py-5 rounded-3xl text-lg font-semibold hover:bg-white hover:text-[#1f2937]">
+                    <i class="fas fa-home mr-3"></i>I Want to Sell
                 </a>
             </div>
         </div>
     </section>
 
     <!-- CORE OFFERS -->
-    <section id="offers" class="py-24 deep-navy text-white">
+    <section id="offers" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-5xl font-bold text-center mb-16 section-title">Our Core Offers</h2>
+            <h2 class="text-5xl font-bold text-center mb-16 section-title text-[#1f2937]">Our Core Offers</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#13213f] p-8 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-4 gold">Build a UK Property Portfolio Remotely</h3>
-                    <p class="text-gray-300">“Done-for-you portfolio building from sourcing to management”</p>
+                <div class="bg-[#f5f5dc] p-8 rounded-3xl card border border-gray-100 flex flex-col">
+                    <div class="icon-circle mb-6"><i class="fas fa-building"></i></div>
+                    <h3 class="text-3xl font-semibold mb-4">Build a UK Property Portfolio Remotely</h3>
+                    <p class="text-gray-600">Done-for-you portfolio building from sourcing to management</p>
                 </div>
-                <div class="bg-[#13213f] p-8 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-4 gold">Hands-Free Income Through Vetted Deals</h3>
-                    <p class="text-gray-300">“Pre-packaged, income-generating opportunities” </p>
+                <div class="bg-[#f5f5dc] p-8 rounded-3xl card border border-gray-100 flex flex-col">
+                    <div class="icon-circle mb-6"><i class="fas fa-handshake"></i></div>
+                    <h3 class="text-3xl font-semibold mb-4">Hands-Free Income Through Vetted Deals</h3>
+                    <p class="text-gray-600">Pre-packaged, income-generating opportunities</p>
                 </div>
-                <div class="bg-[#13213f] p-8 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-4 gold">Co-Invest in Development Projects</h3>
-                    <p class="text-gray-300">“Access high-return development deals alongside experienced partners” </p>
+                <div class="bg-[#f5f5dc] p-8 rounded-3xl card border border-gray-100 flex flex-col">
+                    <div class="icon-circle mb-6"><i class="fas fa-users"></i></div>
+                    <h3 class="text-3xl font-semibold mb-4">Co-Invest in Development Projects</h3>
+                    <p class="text-gray-600">Access high-return development deals alongside experienced partners</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="py-24 bg-gold">
+    <section id="how" class="py-24 beige">
         <div class="max-w-6xl mx-auto px-8 text-center">
-            <h2 class="text-5xl font-bold mb-16 section-title">How It Works</h2>
+            <h2 class="text-5xl font-bold mb-16 section-title text-[#1f2937]">How It Works</h2>
             <div class="grid md:grid-cols-5 gap-6">
-                <div class="card bg-white p-6 rounded-3xl border text-center"><div class="w-16 h-16 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-3xl font-bold mb-4">1</div><p class="font-semibold">Book Call</p></div>
-                <div class="card bg-white p-6 rounded-3xl border text-center"><div class="w-16 h-16 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-3xl font-bold mb-4">2</div><p class="font-semibold">Define Goals</p></div>
-                <div class="card bg-white p-6 rounded-3xl border text-center"><div class="w-16 h-16 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-3xl font-bold mb-4">3</div><p class="font-semibold">We Source</p></div>
-                <div class="card bg-white p-6 rounded-3xl border text-center"><div class="w-16 h-16 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-3xl font-bold mb-4">4</div><p class="font-semibold">You Invest</p></div>
-                <div class="card bg-white p-6 rounded-3xl border text-center"><div class="w-16 h-16 mx-auto gold-bg text-black rounded-2xl flex items-center justify-center text-3xl font-bold mb-4">5</div><p class="font-semibold">We Manage</p></div>
+                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
+                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-phone"></i></div>
+                    <div class="text-2xl font-bold text-gray-400 mb-2">01</div>
+                    <p class="font-semibold">Book Call</p>
+                </div>
+                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
+                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-bullseye"></i></div>
+                    <div class="text-2xl font-bold text-gray-400 mb-2">02</div>
+                    <p class="font-semibold">Define Goals</p>
+                </div>
+                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
+                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-search"></i></div>
+                    <div class="text-2xl font-bold text-gray-400 mb-2">03</div>
+                    <p class="font-semibold">We Source</p>
+                </div>
+                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
+                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-pound-sign"></i></div>
+                    <div class="text-2xl font-bold text-gray-400 mb-2">04</div>
+                    <p class="font-semibold">You Invest</p>
+                </div>
+                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
+                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-cogs"></i></div>
+                    <div class="text-2xl font-bold text-gray-400 mb-2">05</div>
+                    <p class="font-semibold">We Manage</p>
+                </div>
             </div>
         </div>
     </section>
@@ -154,24 +199,24 @@
     <!-- EXAMPLE DEAL -->
     <section id="deals" class="py-20 md:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 section-title">Hands-Free Income Through Vetted Deals</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 section-title text-[#1f2937]">Hands-Free Income Through Vetted Deals</h2>
             <p class="text-center text-xl text-gray-600 mb-12">Example Deal – Manchester</p>
-          
+         
             <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center max-w-5xl mx-auto">
                 <div>
-                    <div class="bg-[#0f172a] text-white p-8 md:p-10 rounded-3xl">
+                    <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl">
                         <div class="grid grid-cols-2 gap-y-6 md:gap-y-8 text-base">
-                            <div><span class="text-gray-400">Purchase Price:</span> <strong>£145,000</strong></div>
-                            <div><span class="text-gray-400">Refurbishment: </span> <strong>£15,000</strong></div>
-                            <div><span class="text-gray-400">Total Investment:</span> <strong>£160,000</strong></div>
-                            <div><span class="text-gray-400">Monthly Rental:</span> <strong>£1,150</strong></div>
-                            <div><span class="text-gray-400">Net Cash Flow:</span> <strong class="gold">~£450/month</strong></div>
-                            <div><span class="text-gray-400">Yield:</span> <strong class="gold">8.6%</strong></div>
-                            <div><span class="text-gray-400">Location:</span> <strong>Manchester</strong></div>
+                            <div><span class="text-gray-500">Purchase Price:</span> <strong>£145,000</strong></div>
+                            <div><span class="text-gray-500">Refurbishment:</span> <strong>£15,000</strong></div>
+                            <div><span class="text-gray-500">Total Investment:</span> <strong>£160,000</strong></div>
+                            <div><span class="text-gray-500">Monthly Rental:</span> <strong>£1,150</strong></div>
+                            <div><span class="text-gray-500">Net Cash Flow:</span> <strong class="text-[#4b5563]">~£450/month</strong></div>
+                            <div><span class="text-gray-500">Yield:</span> <strong class="text-[#4b5563]">8.6%</strong></div>
+                            <div><span class="text-gray-500">Location:</span> <strong>Manchester</strong></div>
                         </div>
                     </div>
                 </div>
-               
+                
                 <div class="rounded-3xl overflow-hidden shadow-2xl">
                     <img src="https://alert-coffee-uprxbsntjf.edgeone.app/31e23322-3b7f-4782-aab3-7afd993f2480.png" alt="Manchester Terraced Houses" class="w-full h-full object-cover">
                 </div>
@@ -186,26 +231,26 @@
                 <div>
                     <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title">Start Building Your Portfolio</h3>
                     <p class="text-xl text-gray-600 leading-relaxed">
-                        “Build a UK Property Portfolio from anywhere in the country.” Let us handle everything — from deal sourcing to full property management.
+                        Build a UK Property Portfolio from anywhere. Let us handle everything — from deal sourcing to full property management.
                     </p>
                 </div>
-               
-                <div class="bg-[#0f172a] text-white p-8 md:p-10 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-6">Investment Inquiry</h3>
+                <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl card border">
+                    <div class="icon-circle mx-auto mb-6"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Investment Inquiry</h3>
                     <form action="https://formspree.io/f/mqenanop" method="POST">
                         <input type="hidden" name="form_type" value="Investment Inquiry">
                         <div class="space-y-5">
-                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <select name="budget" required class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
+                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <select name="budget" required class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
                                 <option value="">Investment Budget</option>
                                 <option>£50k - £150k</option>
                                 <option>£150k - £300k</option>
                                 <option>£300k+</option>
                             </select>
-                            <textarea name="message" rows="4" required placeholder="Tell us about your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black"></textarea>
-                            <button type="submit" class="w-full gold-bg text-black py-6 rounded-3xl font-semibold text-lg hover:bg-amber-300">
+                            <textarea name="message" rows="4" required placeholder="Tell us about your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                            <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
                                 Submit Investment Inquiry
                             </button>
                         </div>
@@ -216,29 +261,30 @@
     </section>
 
     <!-- SELL SECTION -->
-    <section id="sell-form" class="py-20 md:py-24 navy text-white">
+    <section id="sell-form" class="py-20 md:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-white text-black p-8 md:p-10 rounded-3xl card">
-                    <h3 class="text-3xl font-semibold mb-6">Sell Your Property</h3>
+                <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl card border">
+                    <div class="icon-circle mx-auto mb-6"><i class="fas fa-home"></i></div>
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Sell Your Property</h3>
                     <form action="https://formspree.io/f/mqenanop" method="POST">
                         <input type="hidden" name="form_type" value="Sell Property">
                         <div class="space-y-5">
-                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <input type="text" name="property_address" required placeholder="Property Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                            <textarea name="message" rows="4" placeholder="Property details..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black"></textarea>
-                            <button type="submit" class="w-full gold-bg text-black py-6 rounded-3xl font-semibold text-lg hover:bg-amber-300">
+                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="text" name="property_address" required placeholder="Property Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <textarea name="message" rows="4" placeholder="Property details..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                            <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
                                 Get Valuation & Offer
                             </button>
                         </div>
                     </form>
                 </div>
-               
+                
                 <div>
-                    <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title text-white">Ready to Sell?</h3>
-                    <p class="text-xl text-white/80 leading-relaxed">
+                    <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title">Ready to Sell?</h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
                         Get a competitive cash offer from our investor network.<br>
                         No agent fees. Fast & hassle-free.
                     </p>
@@ -250,19 +296,20 @@
     <!-- STRATEGY CALL -->
     <section id="strategy-call" class="py-20 md:py-24 bg-white">
         <div class="max-w-xl mx-auto px-6">
-            <div class="bg-[#0f172a] text-white p-8 md:p-12 rounded-3xl card text-center">
+            <div class="bg-[#f5f5dc] p-8 md:p-12 rounded-3xl card border text-center">
+                <div class="icon-circle mx-auto mb-6"><i class="fas fa-calendar-check"></i></div>
                 <h3 class="text-4xl font-semibold mb-3">Book Your Strategy Call</h3>
-                <p class="text-white/70 mb-10">30-minute consultation with our investment team</p>
+                <p class="text-gray-600 mb-10">30-minute consultation with our investment team</p>
                 <form action="https://formspree.io/f/mqenanop" method="POST">
                     <input type="hidden" name="form_type" value="Strategy Call">
                     <div class="space-y-5">
-                        <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                        <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                        <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                        <input type="text" name="preferred_time" placeholder="Preferred Date & Time" class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black">
-                        <textarea name="message" rows="3" required placeholder="Your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white text-black"></textarea>
-                        <button type="submit" class="w-full gold-bg text-black py-6 rounded-3xl font-semibold text-lg hover:bg-amber-300">
-                            Book Strategy Call
+                        <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="text" name="preferred_time" placeholder="Preferred Date & Time" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <textarea name="message" rows="3" required placeholder="Your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                        <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
+                            <i class="fas fa-calendar-plus mr-2"></i>Book Strategy Call
                         </button>
                     </div>
                 </form>
@@ -273,19 +320,17 @@
     <!-- FOOTER -->
     <footer class="bg-white py-12 border-t text-center text-gray-500">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-3xl font-semibold text-[#0f172a] mb-2">UK House</p>
+            <p class="text-3xl font-semibold text-[#1f2937] mb-2">UK House</p>
             <p>© 2026 UK House Property Investments • All Rights Reserved</p>
         </div>
     </footer>
 
     <script>
-        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 80);
         });
-
-        // Mobile Menu Toggle
+        
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
