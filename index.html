@@ -208,7 +208,159 @@
                         </div>
                     </div>
                 </div>
+                <!-- New Added Content -->
+                        <div class="border-t border-gray-300 pt-8">
+                            <h4 class="font-semibold text-[#1f2937] mb-4 flex items-center gap-2">
+                                <i class="fas fa-arrow-right text-[#6b7280]"></i> 
+                                After You Invest
+                            </h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-[#4b5563] mt-1"></i>
+                                    Property is refurbished (if needed)
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-[#4b5563] mt-1"></i>
+                                    Tenants are sourced
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check text-[#4b5563] mt-1"></i>
+                                    Letting and management handled
+                                </li>
+                            </ul>
+                            <p class="mt-6 text-[#1f2937] font-medium">
+                                You receive income + regular updates — <span class="italic">without any involvement</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://alert-coffee-uprxbsntjf.edgeone.app/31e23322-3b7f-4782-aab3-7afd993f2480.png" alt="Manchester Terraced Houses" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT FORM -->
+    <section id="investment-form" class="py-20 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title">Start Building Your Portfolio</h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Build a UK Property Portfolio from anywhere. Let us handle everything — from deal sourcing to full property management.
+                    </p>
+                </div>
+                <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl card border">
+                    <div class="icon-circle mx-auto mb-6"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Investment Inquiry</h3>
+                    <form action="https://formspree.io/f/mqenanop" method="POST">
+                        <input type="hidden" name="form_type" value="Investment Inquiry">
+                        <div class="space-y-5">
+                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <select name="budget" required class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                                <option value="">Investment Budget</option>
+                                <option>£50k - £150k</option>
+                                <option>£150k - £300k</option>
+                                <option>£300k+</option>
+                            </select>
+                            <textarea name="message" rows="4" required placeholder="Tell us about your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                            <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
+                                Submit Investment Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELL SECTION -->
+    <section id="sell-form" class="py-20 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl card border">
+                    <div class="icon-circle mx-auto mb-6"><i class="fas fa-home"></i></div>
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Sell Your Property</h3>
+                    <form action="https://formspree.io/f/mqenanop" method="POST">
+                        <input type="hidden" name="form_type" value="Sell Property">
+                        <div class="space-y-5">
+                            <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <input type="text" name="property_address" required placeholder="Property Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                            <textarea name="message" rows="4" placeholder="Property details..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                            <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
+                                Get Valuation & Offer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title">Ready to Sell?</h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Get a competitive cash offer from our investor network.<br>
+                        No agent fees. Fast & hassle-free.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGY CALL -->
+    <section id="strategy-call" class="py-20 md:py-24 bg-white">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="bg-[#f5f5dc] p-8 md:p-12 rounded-3xl card border text-center">
+                <div class="icon-circle mx-auto mb-6"><i class="fas fa-calendar-check"></i></div>
+                <h3 class="text-4xl font-semibold mb-3">Book Your Strategy Call</h3>
+                <p class="text-gray-600 mb-10">30-minute consultation with our investment team</p>
+                <form action="https://formspree.io/f/mqenanop" method="POST">
+                    <input type="hidden" name="form_type" value="Strategy Call">
+                    <div class="space-y-5">
+                        <input type="text" name="name" required placeholder="Full Name" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="email" name="email" required placeholder="Email Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="tel" name="phone" required placeholder="Phone Number" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <input type="text" name="preferred_time" placeholder="Preferred Date & Time" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
+                        <textarea name="message" rows="3" required placeholder="Your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
+                        <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">
+                            <i class="fas fa-calendar-plus mr-2"></i>Book Strategy Call
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-12 border-t text-center text-gray-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-3xl font-semibold text-[#1f2937] mb-2">UK House</p>
+            <p>© 2026 UK House Property Investments • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 80);
+        });
+        
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>
+The new section looks professional and fits perfectly. Would you like any styling adjustments to this part?
                 <div class="rounded-3xl overflow-hidden shadow-2xl">
                     <img src="https://alert-coffee-uprxbsntjf.edgeone.app/31e23322-3b7f-4782-aab3-7afd993f2480.png" alt="Manchester Terraced Houses" class="w-full h-full object-cover">
                 </div>
