@@ -20,8 +20,38 @@
         .card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .card:hover { transform: translateY(-8px); }
         .compact-input { padding: 14px 20px !important; font-size: 15px; }
+        .icon-circle {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6b7280;
+            color: white;
+            border-radius: 9999px;
+            font-size: 1.4rem;
+        }
 
         .footer-dark { background-color: #111827; color: #e5e7eb; }
+
+        /* Navbar - Light at top, Light background + Dark text when scrolled */
+        .navbar {
+            transition: all 0.4s ease;
+            background-color: transparent;
+        }
+        .navbar.scrolled {
+            background-color: #f5f5dc !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .nav-text,
+        .navbar .logo-text {
+            color: white;
+            transition: color 0.4s ease;
+        }
+        .navbar.scrolled .nav-text,
+        .navbar.scrolled .logo-text {
+            color: #1f2937 !important;
+        }
 
         .success-message {
             display: none;
@@ -42,7 +72,7 @@
         <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-white text-[#1f2937] rounded-full flex items-center justify-center font-bold text-2xl">U</div>
-                <div class="text-2xl font-semibold tracking-tight nav-text">UK House</div>
+                <div class="text-2xl font-semibold tracking-tight nav-text logo-text">UK House</div>
             </div>
         
             <nav class="hidden md:flex gap-8 text-base font-medium">
@@ -118,7 +148,7 @@
                 <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
                     <div class="icon-circle mx-auto mb-4"><i class="fas fa-bullseye"></i></div>
                     <div class="text-2xl font-bold text-gray-400 mb-2">02</div>
-                    <p class="font-semibold">Define Goals</p>
+                    <p class="font-semibold">Define Your Goals</p>
                 </div>
                 <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
                     <div class="icon-circle mx-auto mb-4"><i class="fas fa-search"></i></div>
@@ -185,7 +215,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-4xl md:text-5xl font-semibold mb-6 section-title">Start Building Your Portfolio</h3>
-                    <p class="text-xl text-gray-600 leading-relaxed">Build a UK Property Portfolio from anywhere. Let us handle everything.</p>
+                    <p class="text-xl text-gray-600 leading-relaxed">Build a UK Property Portfolio from anywhere. Let us handle everything — from deal sourcing to full property management.</p>
                 </div>
                 <div class="bg-[#f5f5dc] p-8 md:p-10 rounded-3xl card border">
                     <div class="icon-circle mx-auto mb-6"><i class="fas fa-chart-line"></i></div>
@@ -257,7 +287,7 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- FOOTER -->
     <footer class="footer-dark pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-10">
             <div class="md:col-span-4">
@@ -295,7 +325,6 @@
             </div>
         </div>
 
-        <!-- Social Icons -->
         <div class="max-w-7xl mx-auto px-6 mt-12 flex justify-center gap-6">
             <a href="#" target="_blank" class="w-11 h-11 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-2xl"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank" class="w-11 h-11 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-2xl"><i class="fab fa-instagram"></i></a>
@@ -308,35 +337,38 @@
     </footer>
 
     <script>
-        // Navbar Scroll
+        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 80);
         });
 
-        // Form Success Handler
+        // Form Handler - Success message appears only after sending
         function handleForm(formId, successId) {
             const form = document.getElementById(formId);
-            const success = document.getElementById(successId);
+            const successMsg = document.getElementById(successId);
 
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const btn = form.querySelector('button[type="submit"]');
                 const originalText = btn.textContent;
+
                 btn.textContent = "Sending...";
                 btn.disabled = true;
 
                 try {
-                    const res = await fetch('https://formspree.io/f/mqenanop', {
+                    const response = await fetch('https://formspree.io/f/mqenanop', {
                         method: 'POST',
                         body: new FormData(form),
                         headers: { 'Accept': 'application/json' }
                     });
 
-                    if (res.ok) {
-                        success.style.display = 'block';
-                        form.reset();
-                        setTimeout(() => success.style.display = 'none', 8000);
+                    if (response.ok) {
+                        // Show success message only after successful submission
+                        setTimeout(() => {
+                            successMsg.style.display = 'block';
+                            form.reset();
+                        }, 800);
                     } else {
                         alert("Something went wrong. Please try again.");
                     }
