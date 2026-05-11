@@ -22,8 +22,22 @@
         .compact-input { padding: 14px 20px !important; font-size: 15px; }
 
         .footer-dark { background-color: #111827; color: #e5e7eb; }
-        
-        /* Success Message */
+
+        /* Navbar */
+        .navbar {
+            transition: all 0.4s ease;
+            background-color: transparent;
+        }
+        .navbar.scrolled {
+            background-color: #f5f5dc !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(12px);
+        }
+        .navbar.scrolled .nav-text,
+        .navbar.scrolled .logo-text {
+            color: #1f2937 !important;
+        }
+
         .success-message {
             display: none;
             background-color: #10b981;
@@ -39,17 +53,19 @@
 <body class="bg-[#fffff0] text-[#1f2937] font-sans">
 
     <!-- NAVBAR -->
-    <header id="navbar" class="navbar bg-transparent text-white fixed w-full z-50 py-4">
+    <header id="navbar" class="navbar fixed w-full z-50 py-4">
         <div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-white text-[#1f2937] rounded-full flex items-center justify-center font-bold text-2xl">U</div>
-                <div class="text-2xl font-semibold tracking-tight nav-text">UK House</div>
+                <div class="w-9 h-9 bg-[#6b7280] text-white rounded-full flex items-center justify-center font-bold text-2xl">U</div>
+                <div class="text-2xl font-semibold tracking-tight logo-text nav-text">UK House</div>
             </div>
+            
             <nav class="hidden md:flex gap-8 text-base font-medium">
                 <a href="#offers" class="nav-link nav-text">Offers</a>
                 <a href="#how" class="nav-link nav-text">How It Works</a>
                 <a href="#deals" class="nav-link nav-text">Deals</a>
             </nav>
+            
             <div class="flex items-center gap-4">
                 <a href="#strategy-call" class="accent px-6 py-3 rounded-2xl font-semibold accent-hover text-sm hidden sm:block">
                     Book Strategy Call
@@ -87,79 +103,19 @@
             <h2 class="text-5xl font-bold text-center mb-16 section-title text-[#1f2937]">Our Core Offers</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-[#f5f5dc] p-8 rounded-3xl card">
-                    <div class="icon-circle mb-6"><i class="fas fa-building"></i></div>
+                    <div class="w-14 h-14 bg-[#6b7280] text-white rounded-full flex items-center justify-center text-3xl mb-6"><i class="fas fa-building"></i></div>
                     <h3 class="text-3xl font-semibold mb-4">Build a UK Property Portfolio Remotely</h3>
                     <p class="text-gray-600">Done-for-you portfolio building from sourcing to management</p>
                 </div>
                 <div class="bg-[#f5f5dc] p-8 rounded-3xl card">
-                    <div class="icon-circle mb-6"><i class="fas fa-handshake"></i></div>
+                    <div class="w-14 h-14 bg-[#6b7280] text-white rounded-full flex items-center justify-center text-3xl mb-6"><i class="fas fa-handshake"></i></div>
                     <h3 class="text-3xl font-semibold mb-4">Hands-Free Income Through Vetted Deals</h3>
                     <p class="text-gray-600">Pre-packaged, income-generating opportunities</p>
                 </div>
                 <div class="bg-[#f5f5dc] p-8 rounded-3xl card">
-                    <div class="icon-circle mb-6"><i class="fas fa-users"></i></div>
+                    <div class="w-14 h-14 bg-[#6b7280] text-white rounded-full flex items-center justify-center text-3xl mb-6"><i class="fas fa-users"></i></div>
                     <h3 class="text-3xl font-semibold mb-4">Co-Invest in Development Projects</h3>
                     <p class="text-gray-600">Access high-return development deals alongside experienced partners</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how" class="py-24 beige">
-        <div class="max-w-6xl mx-auto px-8 text-center">
-            <h2 class="text-5xl font-bold mb-16 section-title text-[#1f2937]">How It Works</h2>
-            <div class="grid md:grid-cols-5 gap-6">
-                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
-                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-phone"></i></div>
-                    <div class="text-2xl font-bold text-gray-400 mb-2">01</div>
-                    <p class="font-semibold">Book Call</p>
-                </div>
-                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
-                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-bullseye"></i></div>
-                    <div class="text-2xl font-bold text-gray-400 mb-2">02</div>
-                    <p class="font-semibold">Define Goals</p>
-                </div>
-                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
-                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-search"></i></div>
-                    <div class="text-2xl font-bold text-gray-400 mb-2">03</div>
-                    <p class="font-semibold">We Source</p>
-                </div>
-                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
-                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-pound-sign"></i></div>
-                    <div class="text-2xl font-bold text-gray-400 mb-2">04</div>
-                    <p class="font-semibold">You Invest</p>
-                </div>
-                <div class="card bg-white p-6 rounded-3xl border shadow-sm text-center">
-                    <div class="icon-circle mx-auto mb-4"><i class="fas fa-cogs"></i></div>
-                    <div class="text-2xl font-bold text-gray-400 mb-2">05</div>
-                    <p class="font-semibold">We Manage</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXAMPLE DEAL -->
-    <section id="deals" class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-4 section-title">Hands-Free Income Through Vetted Deals</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Example Deal – Manchester</p>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <div class="bg-[#f5f5dc] p-10 rounded-3xl">
-                        <div class="grid grid-cols-2 gap-y-6 text-base mb-10">
-                            <div><span class="text-gray-500">Purchase Price:</span> <strong>£145,000</strong></div>
-                            <div><span class="text-gray-500">Refurbishment:</span> <strong>£15,000</strong></div>
-                            <div><span class="text-gray-500">Total Investment:</span> <strong>£160,000</strong></div>
-                            <div><span class="text-gray-500">Monthly Rental:</span> <strong>£1,150</strong></div>
-                            <div><span class="text-gray-500">Net Cash Flow:</span> <strong class="text-emerald-700">~£450/month</strong></div>
-                            <div><span class="text-gray-500">Yield:</span> <strong class="text-emerald-700">8.6%</strong></div>
-                            <div><span class="text-gray-500">Location:</span> <strong>Manchester</strong></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2 rounded-3xl overflow-hidden shadow-2xl">
-                    <img src="https://alert-coffee-uprxbsntjf.edgeone.app/31e23322-3b7f-4782-aab3-7afd993f2480.png" alt="Manchester Property" class="w-full">
                 </div>
             </div>
         </div>
@@ -188,15 +144,14 @@
                         </select>
                         <textarea name="message" rows="4" required placeholder="Tell us about your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
                         <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">Submit Investment Inquiry</button>
-                        <div id="investmentSuccess" class="success-message">✅ Message sent successfully! We'll get back to you soon.</div>
+                        <div id="investmentSuccess" class="success-message">✅ Request has been received successfully! We'll get back to you soon.</div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SELL FORM & STRATEGY CALL FORM (same pattern) -->
-    <!-- SELL SECTION -->
+    <!-- SELL FORM -->
     <section id="sell-form" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -210,7 +165,7 @@
                         <input type="text" name="property_address" required placeholder="Property Address" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
                         <textarea name="message" rows="4" placeholder="Property details..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
                         <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">Get Valuation & Offer</button>
-                        <div id="sellSuccess" class="success-message">✅ Thank you! Our team will contact you shortly.</div>
+                        <div id="sellSuccess" class="success-message">✅ Request has been received successfully! Our team will contact you shortly.</div>
                     </form>
                 </div>
                 <div>
@@ -235,7 +190,7 @@
                     <input type="text" name="preferred_time" placeholder="Preferred Date & Time" class="compact-input w-full border border-gray-300 rounded-2xl bg-white">
                     <textarea name="message" rows="3" required placeholder="Your investment goals..." class="compact-input w-full border border-gray-300 rounded-2xl bg-white"></textarea>
                     <button type="submit" class="w-full accent py-6 rounded-3xl font-semibold text-lg accent-hover">Book Strategy Call</button>
-                    <div id="strategySuccess" class="success-message">✅ Request received! We'll confirm your call soon.</div>
+                    <div id="strategySuccess" class="success-message">✅ Request has been received successfully! We'll confirm your call soon.</div>
                 </form>
             </div>
         </div>
@@ -273,10 +228,7 @@
 
             <div class="md:col-span-5">
                 <h3 class="text-xl font-semibold mb-6 text-white">Let’s Talk About Your Property Goals</h3>
-                <p class="text-gray-300 mb-8">
-                    If you're ready to explore how hands-free investing could work for you, let's have a quick, 
-                    no-obligation chat.
-                </p>
+                <p class="text-gray-300 mb-8">If you're ready to explore how hands-free investing could work for you, let's have a quick, no-obligation chat.</p>
                 <a href="#strategy-call" class="inline-block bg-amber-400 hover:bg-amber-300 text-[#1f2937] font-semibold px-8 py-4 rounded-2xl transition-colors">
                     Arrange a Call Today!
                 </a>
@@ -302,15 +254,27 @@
     </footer>
 
     <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Form Handler - Success message only after successful send
         function handleFormSubmit(formId, successId) {
             const form = document.getElementById(formId);
             const successMsg = document.getElementById(successId);
 
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
+                
                 const button = form.querySelector('button[type="submit"]');
                 const originalText = button.textContent;
-
+                
                 button.textContent = "Sending...";
                 button.disabled = true;
 
@@ -322,14 +286,17 @@
                     });
 
                     if (response.ok) {
+                        // Show success message only after successful submission
                         successMsg.style.display = 'block';
                         form.reset();
-                        setTimeout(() => successMsg.style.display = 'none', 8000);
+                        setTimeout(() => {
+                            successMsg.style.display = 'none';
+                        }, 8000);
                     } else {
                         alert("Something went wrong. Please try again.");
                     }
                 } catch (err) {
-                    alert("Connection error. Please check your internet.");
+                    alert("Connection error. Please check your internet and try again.");
                 }
 
                 button.textContent = originalText;
@@ -337,6 +304,7 @@
             });
         }
 
+        // Initialize all forms
         document.addEventListener('DOMContentLoaded', () => {
             handleFormSubmit('investmentForm', 'investmentSuccess');
             handleFormSubmit('sellForm', 'sellSuccess');
